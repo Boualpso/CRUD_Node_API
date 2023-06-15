@@ -18,15 +18,18 @@ const users = [{
 router.get('/', (req, res) => {
     console.log(users);
 
-    
+
     res.send(users);
 });
 
 
 router.post('/', (req, res) => {
 
-    res.send(users);
-
+    const user = req.body;
+    //users.push()
+    res.send(`user with the username ${user.firstname} added to the database`);
 });
+
+
 export default router;
 
